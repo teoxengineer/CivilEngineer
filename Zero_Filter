@@ -1,0 +1,2 @@
+This code is being used if you have some zero values in an array, it enable to filter non-zero values and extract those values from the range
+=LAMBDA(Array;IFERROR(INDEX(Array;MATCH(SEQUENCE(COUNTA(Array));SCAN(0;--IFNUMBER(IF(Array<>0;Array));LAMBDA(a;r;a+r));0));""))
